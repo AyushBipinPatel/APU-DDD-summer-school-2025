@@ -1,0 +1,25 @@
+---
+title: "Designing and Programming Survey Forms"
+author: "Ayush Patel"
+format: html
+editor: visual
+---
+
+# Welcome
+
+This is the landing page for the modules on designing and programming survey forms. This module is a part of the Data, Democracy & Development (DDD) summer field practice course.
+
+# About you
+
+  * New to designing survey questionnaires.
+  * Has an undergrad degree or is enrolled in one or is enrolled in a post grad program.
+  * Knows foundations of stats and econ/policy principles.
+  
+# Learning Outcomes for this module
+
+	* Will be able to design, program and implement survey questionnaires
+	* Will learn data viz for descriptive and exploratory analysis
+	
+# Resources
+
+  * [Link to Lecture Slides]()
