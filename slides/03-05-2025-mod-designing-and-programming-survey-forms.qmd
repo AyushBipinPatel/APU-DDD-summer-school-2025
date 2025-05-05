@@ -1,0 +1,118 @@
+---
+title: "Designing and Programming Survey Forms"
+author: "Ayush Patel"
+subtitle: "Data, Democracy & Development (DDD) summer field practice course"
+institute: "At Azim Premji University"
+date: today
+date-format: "DD MMM, YYYY"
+format: 
+  revealjs:
+    embed-resources: true
+    slide-number: c/t
+    width: 1400
+    height: 800
+    theme: [default, theme.scss]
+    footer: "Email: ayush.ap58@gmail.com"
+---
+
+# Hello
+
+::::{.columns}
+
+:::{.column}
+
+[I am Ayush.]{.fragment fragment-index="1" style="font-size:45px"}
+
+[I am a researcher working at the intersection of data, development and economics.]{.fragment fragment-index="2" style="font-size:25px"}
+
+[I am a [RStudio (Posit) certified tidyverse Instructor.](https://education.rstudio.com/trainers/people/patel+ayush/)]{.fragment fragment-index="3" style="font-size:25px"}
+
+[I am a Researcher at [Oxford Poverty and Human development Initiative (OPHI)](https://ophi.org.uk/), at the University of Oxford.]{.fragment fragment-index="4" style="font-size:25px"}
+
+:::
+
+:::{.column}
+
+![[Hello (Eh bonjour– donc–.) by Charles Motte](https://www.metmuseum.org/art/collection/search/392118"Well)](https://images.metmuseum.org/CRDImages/dp/original/DP808141.jpg){fig-align="center" height=400 .lightbox}
+ 
+
+:::
+
+::::
+
+# Did you come prepared?
+
+::::{.columns}
+
+:::{.column}
+[Do you have a SurveyCTO account? if not, register for a free account [here]()]{.fragment fragment-index="1"}
+
+[Please download the SurveyCTO Collect app on your phone]{.fragment fragment-index="2"}
+:::
+
+:::{.column}
+
+![[Armor (Gusoku) Helmet signed by Bamen Tomotsugu](https://www.metmuseum.org/art/collection/search/24975)](https://images.metmuseum.org/CRDImages/aa/original/DT5333.jpg){fig-align="center" height=400 .lightbox}
+
+
+:::
+
+::::
+
+# Learning Goals
+
+[Get a working understanding of how components of survey tech work.]{.fragment fragment-index="1"}
+
+[Design and program a survey questionnaire to make it available for field use.]{.fragment fragment-index="2"}
+
+[Extract the collected data for analyses.]{.fragment fragment-index="3"}
+
+[Build an intuition on how to ask questions.]{.fragment fragment-index="4"}
+
+
+# What we will not cover
+
+[Advanced methods of communicating with servers using API.]{.fragment fragment-index="1"}
+
+[Data encryption for sensitive data.]{.fragment fragment-index="2"}
+
+[Building data pipelines that extract, clean and present analyses.]{.fragment fragment-index="3"}
+
+[Sampling theory, and analyses.]{.fragment fragment-index="4"}
+
+
+# Components of survey tech
+*and how it works*
+
+::::{.columns}
+
+:::{.column}
+<br>
+<br>
+But Why should I know this stupid tech stuff? ^[We only care about this because we need to know what has gone wrong, when it does. This is the minimum empathy the tech requires from us to use it effectively.]
+:::
+
+:::{.column}
+
+![[The Doctor Dismissing Death](https://www.metmuseum.org/art/collection/search/810928)](https://images.metmuseum.org/CRDImages/dp/original/DP881048.jpg){fig-align="center" height=400 .lightbox}
+:::
+
+::::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

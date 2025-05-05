@@ -1,0 +1,17 @@
+/*-- scss:defaults --*/
+
+
+
+/*-- scss:rules --*/
+
+.reveal {
+  .slides {
+    .slide {
+      figcaption {
+        font-size: 0.5em;
+        text-align: center;
+        margin-top: 1px;
+      }
+    }
+  }
+}

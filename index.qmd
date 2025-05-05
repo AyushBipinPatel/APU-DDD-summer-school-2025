@@ -11,15 +11,19 @@ This is the landing page for the modules on designing and programming survey for
 
 # About you
 
-  -   New to designing survey questionnaires.
-  -   Has an undergrad degree or is enrolled in one or is enrolled in a post grad program.
-  -   Knows foundations of stats and econ/policy principles.
+-   New to designing survey questionnaires.
+-   Has an undergrad degree or is enrolled in one or is enrolled in a post grad program.
+-   Knows foundations of stats and econ/policy principles.
+
+# Pre-requisits and other necessary setup 
+
+-   Create a free account on the SurveyCTO Website
+-   Download the SurveyCTO collect app on your phone
 
 # Learning Outcomes for this module
-         
-  * Will be able to design, program and implement survey questionnaires
-  * Will learn data viz for descriptive and exploratory analysis
 
+-   Will be able to design, program and implement survey questionnaires
+-   Will learn data viz for descriptive and exploratory analysis
 
 # Resources
 
