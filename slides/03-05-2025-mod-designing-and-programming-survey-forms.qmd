@@ -8,6 +8,8 @@ date-format: "DD MMM, YYYY"
 format: 
   revealjs:
     embed-resources: true
+    margin-left: 50px
+    margin-right: 50px
     slide-number: c/t
     width: 1400
     height: 800
@@ -121,14 +123,48 @@ But Why should I know this stupid tech stuff? ^[We only care about this because 
 
 
 
+# Reckless Learning-1 (20-30 Mins) {.smaller}
+
+:::{.incremental}
+
+  - For a group of 5-7 members. (2 mins)
+  - Navigate to your own SurveyCTO console. Explore the Design, Collect, Monitor, Export and Configure tabs. (3 mins)
+  - Choose one person from your group. We will use their SurveyCTO server for this exercise. (1 min)
+  - Add the remaining members as team to the chosen one's server. (3 min)
+  - All members to login to the chosen server workspace in the SurveyCTO Collect App. (2 mins)
+  - Using the Design tab in server console, upload [this](https://docs.google.com/spreadsheets/d/1-d543t2ZT3ljmQqQhEI3xL7vllv8Qlz8/edit?usp=drive_link&ouid=112023433242202033015&rtpof=true&sd=true) form. Only to be carried out on the chosen one's server. (3 mins)
+  - Use the SurveyCTO Collect app to get the blank form. (2 mins)
+  - Use the SurveyCTO Collect app to record data using the new for for as many people as you can. (5 mins)
+  - Use the SurveyCTO Collect app to submit the collected forms. (2 mins)
+  - Go to the console of the chosen one's server. In the Export tab, find the submitted data. Get this data and take a look. (5 mins)
+
+:::
+
+# Great Job. We will now explore several available features for designing survey forms. {.smaller}
+
+# Form Definition. {.smaller}
+
+<iframe src="https://docs.google.com/spreadsheets/d/1-d543t2ZT3ljmQqQhEI3xL7vllv8Qlz8/edit?usp=drive_link&ouid=112023433242202033015&rtpof=true&sd=true" width="1500" height="600" data-external="1"></iframe>
 
 
+# The Bare Bones
 
+Say, there is only one single question. Nothing else is of interest to you. Everyone and anyone can be asked this question.
 
+**What would the form definition then look like?**
 
+[First ([*name*,*label*]{.mark}), you need the exact phrasing of the question.]{.fragment fragment-index="1"}<br><br>
+[Second ([*type*]{.mark}), what is the type of answer that you expect and accept? (a number, a date, an image?)]{.fragment fragment-index="2"}<br><br>
+[Third ([*constraint*]{.mark}), any reasonable constraints on the answers? (an age range, a date range ?)]{.fragment fragment-index="3"}
 
+# Reckless Learning-2 (5 mins){.smaller}
 
-
-
-
+[Create a copy of the file from the previous example.]{.fragment fragment-index="1"}<br><br>
+[Rename the file.]{.fragment fragment-index="2"}<br><br>
+[Open the newly renamed file. Remove all rows except the title rows from the survey sheet.]{.fragment fragment-index="3"}<br><br>
+[As discussed in the previous slide, add a single question in the survey sheet. Populate all necessary columns.]{.fragment fragment-index="4"}<br><br>
+[Remove all rows except the title row from the choices sheet.]{.fragment fragment-index="5"}<br><br>
+[Add row in choices sheet if needed.]{.fragment fragment-index="6"}<br><br>
+[Change the form title, and form ID in the settings sheet.]{.fragment fragment-index="7"}<br><br>
+[Upload the form on your server and test.]{.fragment fragment-index="8"}
 
