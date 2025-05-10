@@ -2,7 +2,6 @@
 title: "Designing and Programming Survey Forms"
 author: "Ayush Patel"
 format: html
-editor: visual
 ---
 
 # Welcome
@@ -15,7 +14,7 @@ This is the landing page for the modules on designing and programming survey for
 -   Has an undergrad degree or is enrolled in one or is enrolled in a post grad program.
 -   Knows foundations of stats and econ/policy principles.
 
-# Pre-requisits and other necessary setup 
+# Pre-requisits and other necessary setup
 
 -   Create a free account on the SurveyCTO Website
 -   Download the SurveyCTO collect app on your phone
@@ -27,4 +26,4 @@ This is the landing page for the modules on designing and programming survey for
 
 # Resources
 
--   [Link to Lecture Slides]()
+-   [Link to Lecture Slides](slides/03-05-2025-mod-designing-and-programming-survey-forms.html)

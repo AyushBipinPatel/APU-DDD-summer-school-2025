@@ -99,9 +99,25 @@ But Why should I know this stupid tech stuff? ^[We only care about this because 
 
 ::::
 
+# 
+
+<img src="https://www.mermaidchart.com/raw/2f5ea9e8-9bac-4fb6-9bc8-03be98494585?theme=light&version=v0.1&format=svg" width="1500" height="600" margin-left= "auto" margin-right= "auto">
 
 
+# 
 
+<img src="https://www.mermaidchart.com/raw/757d0dda-0a5f-41d4-8b4b-98d6bd2d2443?theme=light&version=v0.1&format=svg" width="1500" height="600" margin-left= "auto" margin-right= "auto">
+
+
+# 
+
+
+<img src="https://www.mermaidchart.com/raw/20179302-f77b-41f6-9868-773cc9af5264?theme=light&version=v0.1&format=svg" width="1500" height="600" margin-left= "auto" margin-right= "auto">
+
+
+# 
+
+<img src="https://www.mermaidchart.com/raw/214db29e-7857-46f2-b316-e99fdad96cf7?theme=light&version=v0.1&format=svg" width="1500" height="600"  margin-left= "auto" margin-right= "auto">
 
 
 
