@@ -221,4 +221,12 @@ Say, there is only one single question. Nothing else is of interest to you. Ever
 [The constraints can be accompanied with a message for the enumerator. This can be done using the `constraint message` column of the form definition]{.fragment fragment-index="4"}<br><br>
 [Can you find the constraint implemented in the `trivial-biryani-survey` for number of times a respondent consumes biryani in a week?]{.fragment fragment-index="5"}
 
+# Relevance
 
+[It is usually of interest to see how *certain* people answer a question of our interest.]{.fragment fragment-index="1"}<br><br>
+[We can use `expressions` to change the flow of the survey questions so that we ask the right question to the right people.]{.fragment fragment-index="2"}<br><br>
+[`expressions` are provided in the `relevance` column for a question or group of questions.]{.fragment fragment-index="3"}<br><br>
+[Continue only on consent is the common, important, and easiest to implement relevance that is found in all decent surveys.]{.fragment fragment-index="4"}<br><br>
+[In the `trivial-biryani-survey` see the relevance column to see an examplpe.]{.fragment fragment-index="5"}
+
+# Reckless Learning-3 (25-30 mins)
