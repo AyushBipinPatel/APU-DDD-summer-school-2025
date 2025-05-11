@@ -47,7 +47,7 @@ format:
 ::::{.columns}
 
 :::{.column}
-[Do you have a SurveyCTO account? if not, register for a free account [here]()]{.fragment fragment-index="1"}
+[Do you have a SurveyCTO account? if not, register for a free account [here](https://login.surveycto.com/signup)]{.fragment fragment-index="1"}<br><br>
 
 [Please download the SurveyCTO Collect app on your phone]{.fragment fragment-index="2"}
 :::
@@ -123,7 +123,7 @@ But Why should I know this stupid tech stuff? ^[We only care about this because 
 
 
 
-# Reckless Learning-1 (20-30 Mins) {.smaller}
+# Reckless Learning-1 (20-30 Mins){.smaller}
 
 :::{.incremental}
 
@@ -167,4 +167,24 @@ Say, there is only one single question. Nothing else is of interest to you. Ever
 [Add row in choices sheet if needed.]{.fragment fragment-index="6"}<br><br>
 [Change the form title, and form ID in the settings sheet.]{.fragment fragment-index="7"}<br><br>
 [Upload the form on your server and test.]{.fragment fragment-index="8"}
+
+# Great Job. We will slowly add more complexity to our forms.{.smaller}
+
+*Before we move ahead..*
+
+:::{.incremental}
+- I shall introduce the Documentation Home page for SurveyCTO. [*Home Docs*](https://docs.surveycto.com/)
+- Some important webpages of the documentation to keep at hand while you create form definitions.[*Core*](https://docs.surveycto.com/02-designing-forms/01-core-concepts/), [*Additioinal*](https://docs.surveycto.com/02-designing-forms/02-additional-topics/), [Advanced](https://docs.surveycto.com/02-designing-forms/03-advanced-topics/)
+:::
+
+
+
+
+
+
+
+
+
+
+
 
