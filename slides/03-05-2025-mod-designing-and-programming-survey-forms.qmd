@@ -211,8 +211,14 @@ Say, there is only one single question. Nothing else is of interest to you. Ever
 
 [How is the `$` operator different from the `.` operator?]{.fragment fragment-index="4"}<br><br>
 
-[See [this](https://docs.surveycto.com/02-designing-forms/01-core-concepts/09.expressions.html) page to browse through applying other logical and mathematical operations.]{.fragment fragment-index="5"}<br><br>
+[See [this](https://docs.surveycto.com/02-designing-forms/01-core-concepts/09.expressions.html) page to browse through applying other logical and mathematical operations.]{.fragment fragment-index="5"}
 
 # Constraints
+
+[The need to restrict answers to a reasonable set of options or numbers.]{.fragment fragment-index="1"}<br><br>
+[How many people live in your house: "56"]{.fragment fragment-index="2"}<br><br>
+[The constraints are implemented in the `constraint` column of the form definition]{.fragment fragment-index="3"}<br><br>
+[The constraints can be accompanied with a message for the enumerator. This can be done using the `constraint message` column of the form definition]{.fragment fragment-index="4"}<br><br>
+[Can you find the constraint implemented in the `trivial-biryani-survey` for number of times a respondent consumes biryani in a week?]{.fragment fragment-index="5"}
 
 
