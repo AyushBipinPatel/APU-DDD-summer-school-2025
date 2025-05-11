@@ -178,13 +178,41 @@ Say, there is only one single question. Nothing else is of interest to you. Ever
 :::
 
 
+# Expressions {.smaller}
 
 
+::::{.cloumns}
 
+:::{.column}
 
+[**Why?**]{.fragment fragment-index="1"}<br><br>
+[Lets us calculate on the fly, apply conditional flows to questions, and validate answers.]{.fragment fragment-index="2"}<br><br>
+[There are two important ideas from the syntax point of view]{.fragment fragment-index="3"}<br><br>
+[First, referring to the value of a specific field.]{.fragment fragment-index="4"}<br><br>
+[Second, referring to the values the current field.]{.fragment fragment-index="5"}<br><br>
+[We shall look at how these are used.]{.fragment fragment-index="6"}<br><br>
+:::
 
+:::{.column}
 
+![[Terror or Fright by Le Brun](https://www.metmuseum.org/art/collection/search/386122)](https://images.metmuseum.org/CRDImages/dp/original/DP854027.jpg){fig-align="center" height=400 .lightbox}
 
+:::
 
+::::
+
+## Expressions
+
+[In the `trivial-biryani-survey` I use `${enrolled} = 1` to ensure that questions are asked to respondents that report to be enrolled in college.]{.fragment fragment-index="1"}<br><br>
+
+[I also use `.>16 and .<130` to ensure age values are validated? Do you think my range is a reasonable one?]{.fragment fragment-index="2"}<br><br>
+
+[Can you find other instances in the biryani survey where I use such expression?]{.fragment fragment-index="3"}<br><br>
+
+[How is the `$` operator different from the `.` operator?]{.fragment fragment-index="4"}<br><br>
+
+[See [this](https://docs.surveycto.com/02-designing-forms/01-core-concepts/09.expressions.html) page to browse through applying other logical and mathematical operations.]{.fragment fragment-index="5"}<br><br>
+
+# Constraints
 
 
