@@ -236,11 +236,45 @@ Say, there is only one single question. Nothing else is of interest to you. Ever
 [You want to capture details of education, age, marital status,age at marriage of the target group and their spouse.]{.fragment fragment-index="3"}<br><br>
 [You want information on holding a bank account, debit cards, credit cards, UPI for the target group and their spouse.]{.fragment fragment-index="4"}<br><br>
 [For the target group you want to record who opened their account, Did they open an (additional or new) account after marriage.]{.fragment fragment-index="5"}<br><br>
-[Does the target group have any sources of income/savings independent of their spouse.]{.fragment fragment-index="5"}<br><br>
-[How often does the target group spend on indulgence expenses (not for their kids education, not for HH expenses, etc) only for themselves. Ask for reasons if they dont.]{.fragment fragment-index="6"}<br><br>
-[Begin by making a flow chart of questions, phrase the questions, use constraints and relevance as required.]{.fragment fragment-index="7"}<br><br>
-[Upload the form on SurveyCTO and test it, does it work as expected?]{.fragment fragment-index="8"}
+[Does the target group have any sources of income/savings independent of their spouse.]{.fragment fragment-index="6"}<br><br>
+[How often does the target group spend on indulgence expenses (not for their kids education, not for HH expenses, etc) only for themselves. Ask for reasons if they dont.]{.fragment fragment-index="7"}<br><br>
+[Begin by making a flow chart of questions, phrase the questions, use constraints and relevance as required.]{.fragment fragment-index="8"}<br><br>
+[Upload the form on SurveyCTO and test it, does it work as expected?]{.fragment fragment-index="9"}
 
+# Grouping
 
+::::{.columns}
 
+:::{.column width="30%"}
+
+[Organization]{.fragment fragment-index="1"}<br><br>
+[Easy Navigation]{.fragment fragment-index="1"}<br><br>
+[Less Duplication]{.fragment fragment-index="2"}<br><br>
+[Less copy paste errors]{.fragment fragment-index="2"}<br><br>
+
+:::
+
+:::{.column width="70%"}
+
+|   type    |  name  | label  | relevance |
+|:---------:|:------:|:------:|:---------:|
+|begin group| gname  | Group1 | ${child}=1|
+|..fields.. | f1     | what...|           |
+|..fields.. | f2     |  how...|           |
+| end group |        |        |           |
+
+:::
+
+::::
+
+# Repeating Questions
+
+|   type     |  name  | label  | relevance | repeat_count  |
+|:----------:|:------:|:------:|:---------:|:-------------:|
+|begin repeat| gname  | Group1 | ${child}=1| ${num_child}  |
+|..fields..  | f1     | what...|           |               |
+|..fields..  | f2     |  how...|           |               |
+| end repeat |        |        |           |               |
+
+[see docs](https://docs.surveycto.com/02-designing-forms/01-core-concepts/06.groups.html)
 
