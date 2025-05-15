@@ -27,3 +27,6 @@ This is the landing page for the modules on designing and programming survey for
 # Resources
 
 -   [Link to Lecture Slides](slides/03-05-2025-mod-designing-and-programming-survey-forms.html)
+-   [Dimewiki SurveyCTO Programming](https://dimewiki.worldbank.org/SurveyCTO_Programming)
+-   [Dimewiki SurveyCTO Server Mangement](https://dimewiki.worldbank.org/SurveyCTO_Server_Management)
+-   [Dimewiki Best Practices](https://dimewiki.worldbank.org/SurveyCTO_Best_Practices)
