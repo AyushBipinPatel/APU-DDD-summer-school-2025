@@ -278,3 +278,192 @@ Say, there is only one single question. Nothing else is of interest to you. Ever
 
 [see docs](https://docs.surveycto.com/02-designing-forms/01-core-concepts/06.groups.html)
 
+# Calculate
+
+|   type     |  name  | calculation   |  relevance      |
+|:----------:|:------:|:-------------:|:---------------:|
+|calculate   |num_rand|once(random()) |                 |
+|integer     |treat   |               | ${num_rand}<=0.5|
+|integer     |control |               | ${num_rand}>0.5 |
+
+
+[see docs](https://docs.surveycto.com/02-designing-forms/01-core-concepts/03zb.field-types-calculate.html)
+
+# Pre-Loading data
+
+[Allows us to use data, collected in previous surveys or otherwise, in survey forms.]{.fragment fragment-index="1"}<br><br>
+
+[Attach one or multiple supporting data files as csv or as spreadsheets or server data.]{.fragment fragment-index="2"}<br><br>
+
+[The attached data *must* have the first row as unique column names for the data.]{.fragment fragment-index="3"}<br><br>
+
+[There must exist a column to uniquely identify each row.]{.fragment fragment-index="4"}<br><br>
+
+[Every column from the the data that is required in the survey form gets its own *calculate*  field in the form definition.]{.fragment fragment-index="5"}<br><br>
+
+# Pre-Loaading data
+
+```{r}
+#| echo: false
+#| fig-cap: Basline.csv
+
+tibble::tibble(
+  ind_id = sample(c(100:300),size = 5,replace = F),
+  score_bir = sample(c(1:10),size = 5, replace = T)
+)|>
+  knitr::kable()
+
+```
+
+# Pre-Loading data {.smaller}
+
+[You are interested in figuring out the right condiment for the new biryani that has been created.]{.fragment fragment-index="1"}<br><br>
+
+[As baseline, you have found a group of individuals that have been given a score to the new biryani, consumed on its own.]{.fragment fragment-index="2"}<br><br>
+
+[It is known that people who score less than 6 never order the product.]{.fragment fragment-index="3"}<br><br>
+
+[So, in your revisit you want to meet people who have scored it less than 6 and offer one of the two condiments at random (salan or raita).]{.fragment fragment-index="4"}<br><br>
+
+[Then ask them to score again. Finally, see if a condiment is able to get the average scores above 6.]{.fragment fragment-index="5"}<br><br>
+
+# Pre-Loading data
+
+[*pulldata()* is the function that allows us to get additional data into the survey form.]{.fragment fragment-index="1"}<br>
+
+[pulldata(*name of the file*, *column of interest*, *uid column in data*,*uid value to match*)]{.fragment fragment-index="2"}<br>
+
+[pulldata(Baseline,score_bir,ind_id,${id}) is provided in calculation column of the form.]{.fragment fragment-index="3"}<br>
+
+# Reckless Learning-4 
+
+::: {.incremental}
+
+- Design a baseline form, record biryani scores by individuals.
+- Each individual should have a uid, say mobile number.
+- Upload this form and survey peers.
+- Export data.
+- Design a follow up form, where:
+- You identify individuals by asking their uid.
+- State their scores from the previous tasting.
+- If the scores are below 6, randomly offer tasting again with salan or raita and get scores again.
+
+:::
+
+# Pre-loading data
+
+*It is unreasonable to think that the respondent or the enumerator will recall their uid all the time with accuracy.*
+
+**We need ability to search through the additional data to identify the right respondents.**
+
+
+# Pre-Loading data {.smaller}
+
+*The enumerator should have the ability to search through the possible respondents of a given area (district, village, ward, etc)*
+
+```{r}
+#| echo: false
+#| fig-cap: listing.csv
+
+tibble::tibble(
+  district_name = c(rep("D1",5),rep("D2",5)),
+  district_id = c(1,1,1,1,1,2,2,2,2,2),
+  village = paste0("v",c(1:10)),
+  village_id = c(1:10),
+  hhid = c(100:109)
+)|>
+  knitr::kable()
+```
+
+# Pre-Loading data {.smaller}
+
+
+
+```{r}
+#| echo: false
+#| fig-cap: survey
+
+tibble::tibble(
+  type = "select_one district",
+  name = "choose_dist",
+  label = "enumerator choose dist",
+  apperance = 'search("listing")'
+)|>
+  knitr::kable()
+```
+
+
+
+```{r}
+#| echo: false
+#| fig-cap: choices
+
+tibble::tibble(
+  list_name = "district",
+  value = "district_id",
+  label = "district_name"
+)|>
+  knitr::kable()
+```
+
+# Pre-Loading data {.smaller}
+
+
+```{r}
+#| echo: false
+#| fig-cap: survey
+
+tibble::tibble(
+  type = "select_one village",
+  name = "choose_village",
+  label = "enumerator choose village",
+  apperance = 'search("listing", "matches", "district_id", ${choose_dist})'
+)|>
+  knitr::kable()
+```
+
+
+
+```{r}
+#| echo: false
+#| fig-cap: choices
+
+tibble::tibble(
+  list_name = "village",
+  value = "vilage_id",
+  label = "village"
+)|>
+  knitr::kable()
+```
+
+# Pre-Loading data {.smaller}
+
+
+```{r}
+#| echo: false
+#| fig-cap: survey
+
+tibble::tibble(
+  type = "select_one HH",
+  name = "choose_HH",
+  label = "enumerator choose HH",
+  apperance = 'search("listing", "matches", "district_id", ${choose_village})'
+)|>
+  knitr::kable()
+```
+
+
+
+```{r}
+#| echo: false
+#| fig-cap: choices
+
+tibble::tibble(
+  list_name = "village",
+  value = "hhid",
+  label = "hhid"
+)|>
+  knitr::kable()
+```
+
+# Fin.
