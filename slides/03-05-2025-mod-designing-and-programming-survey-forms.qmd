@@ -466,4 +466,179 @@ tibble::tibble(
   knitr::kable()
 ```
 
+
+# Data Cleaning Tips
+
+# `{janitor}`
+
+Use the `janitor` package:
+  
+  - Clean column names
+  - Find Duplicates
+  - Compare data frames for same columns before row binding
+
+# Data Checks
+
+  - Make sure all your column types are appropriate
+  - Check data summaries - range, max, min, unique values etc
+  - Do you have the data collected on the right dates?
+  - is data tidy?
+  - Changing choice values to labels 
+  
+# Choice values to Choice labels
+
+```{r}
+#| label: gen-two-dfs-data-and-choice
+#| echo: false
+#| layout-ncol: 3
+#| layout-nrow: 1
+
+library(tidyverse)
+tibble::tibble(
+  q1 = c("1","1","2","4"),
+  q2 = c("1 4", "3", "2 4", "2 3 4")
+) -> data
+
+tibble::tibble(
+  list_name = c(rep("flavour",4),rep("months",4)),
+  value = c(1,2,3,4,1,2,3,4),
+  label = c("red","yellow","green","blue",month.abb[c(1:4)])
+) -> choices
+
+tibble::tibble(
+  type = c("select_one flavour","select_multiple months"),
+  name = c("q1","q2")
+) -> survey
+
+data
+
+choices
+
+survey
+
+```
+
+## Choice values to Choice Labels - get your ducks in a row
+
+```{r}
+#| label: show-combined-table
+#| echo: true
+#| output-location: column
+
+# join the survey and choice tables
+
+left_join(choices,
+          survey|>
+            mutate(
+              type = str_extract(type, "\\s.{1,}$")|>
+                str_squish()
+            ),
+          join_by(list_name == type)) -> survey_choices
+
+survey_choices
+```
+
+## Choice values to Choice Labels - Function to replace single opt choices
+
+```{r}
+#| label: show-fun-single-replace-def
+#| echo: true
+
+
+replace_label_single <- function(nm){
+  
+  data|>
+    pull(.data[[nm]])|>
+    as.numeric()->a
+  
+  return(
+      map_chr(
+    a,
+    ~survey_choices|>
+  filter(name == nm)|>
+  filter(value == .x)|>
+  pull(label)
+  )
+  )
+
+}
+
+```
+
+## Choice values to Choice Labels - apply single opt replace
+
+```{r}
+#| label: apply-single-replace-def
+#| echo: true
+#| output-location: column
+
+replace_label_single("q1")
+
+data|>
+  mutate(
+    q1 = replace_label_single("q1")
+  )
+```
+
+## Choice values to Choice Labels - Function to replace single opt choices
+
+```{r}
+
+replace_label_multiple <- function(nm){
+  
+  data|>
+  pull(.data[[nm]])-> data_values
+  
+ data_values|>
+   str_split(pattern = " ") -> data_values_split
+ 
+ 
+   return(
+    modify(
+    data_values_split,
+    ~ map_chr(
+      .x,
+      ~survey_choices|>
+        filter(name == nm)|>
+        filter(value == .x)|>
+        pull(label)
+      )|> str_c(collapse = " ")
+    )|>
+      unlist()
+      
+   )
+  
+}
+replace_label_multiple("q2")
+```
+
+
+## Choice values to Choice Labels - apply multiple opt replace
+
+```{r}
+#| label: apply-multiple-replace-def
+#| echo: true
+#| output-location: column
+
+replace_label_single("q1")
+
+data|>
+  mutate(
+    q1 = replace_label_single("q1"),
+    q2 = replace_label_multiple("q2")
+  )
+```
+# Data Viz tips
+
+  - choosing the right geometry
+	- always show number of observations in the chart
+	- Chart titles, sub titles and captions are available for use
+	- emphasis on the good, ugly and wrong chart type
+	- choice of colours (contrast and colour blindness)
+	- janitor, gt, reactable, kable for tables
+	
+# Developing good taste for data viz
+
+[Wlak through](https://ayushbipinpatel.github.io/Data-Viz-at-Artha/#/title-slide)
+
 # Fin.
