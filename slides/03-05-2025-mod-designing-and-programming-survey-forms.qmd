@@ -620,8 +620,6 @@ replace_label_multiple("q2")
 #| echo: true
 #| output-location: column
 
-replace_label_single("q1")
-
 data|>
   mutate(
     q1 = replace_label_single("q1"),
