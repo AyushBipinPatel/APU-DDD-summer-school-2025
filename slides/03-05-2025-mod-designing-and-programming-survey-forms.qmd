@@ -633,7 +633,7 @@ data|>
 	- Chart titles, sub titles and captions are available for use
 	- emphasis on the good, ugly and wrong chart type
 	- choice of colours (contrast and colour blindness)
-	- janitor, gt, reactable, kable for tables
+	- [janitor](https://sfirke.github.io/janitor/articles/janitor.html), [gt](https://gt.rstudio.com/), [reactable](https://glin.github.io/reactable/), kable for tables
 	
 # Developing good taste for data viz
 
