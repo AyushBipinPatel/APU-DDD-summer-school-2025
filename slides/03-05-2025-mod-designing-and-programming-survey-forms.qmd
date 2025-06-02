@@ -548,7 +548,7 @@ survey_choices
 replace_label_single <- function(nm){
   
   data|>
-    pull(.data[[nm]])|>
+    pull(nm)|>
     as.numeric()->a
   
   return(
@@ -589,7 +589,7 @@ data|>
 replace_label_multiple <- function(nm){
   
   data|>
-  pull(.data[[nm]])-> data_values
+  pull(nm)-> data_values
   
  data_values|>
    str_split(pattern = " ") -> data_values_split
