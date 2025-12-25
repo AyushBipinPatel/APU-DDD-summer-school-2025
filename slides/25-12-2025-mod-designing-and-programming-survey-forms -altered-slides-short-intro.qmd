@@ -225,7 +225,7 @@ Say, there is only one single question. Nothing else is of interest to you. Ever
 [Continue only on consent is the common, important, and easiest to implement relevance that is found in all decent surveys.]{.fragment fragment-index="4"}<br><br>
 [In the `trivial-biryani-survey` see the relevance column to see an example.]{.fragment fragment-index="5"}
 
-## Reckless Learning-3 (25-30 mins) {.smaller}
+## Reckless Learning-3 (10-15 mins) {.smaller}
 
 [Create a form definition for a door-to-door household interview.]{.fragment fragment-index="1"}<br><br>
 [You are broadly interested in the access to banking and spending autonomy of stay-at-home married women.]{.fragment fragment-index="2"}<br><br>
@@ -285,5 +285,20 @@ Say, there is only one single question. Nothing else is of interest to you. Ever
 
 [see docs](https://docs.surveycto.com/02-designing-forms/01-core-concepts/03zb.field-types-calculate.html)
 
+# Try yourself
+
+[Street vendors (vegetable, pani-puri, momos, etc) take credit through informal sources.]{.fragment fragment-index="1"}<br><br>
+[Goal is to design a survey that provides information on incedence of credit/debt and rates of interests]{.fragment fragment-index="2"}<br><br>
+[Design a survey that asks if the respondent is curretnly in debt. If they are, ask about the duration since they are in debt. Also ask if they are comfortable sharing the rate of interest and principal. Make sure if you have the yearly or monthly interest rate.]{.fragment fragment-index="3"}<br><br>
+[if they are not in debt, ask them where would they get a loan and what do they expect the interest to be.]{.fragment fragment-index="4"}<br><br>
+[Make sure you begin by asking for consent. Always explain why and what are you doing]{.fragment fragment-index="5"}
+
+# Try yourself
+
+[Design a survey to see people's estimates of thei screen times]{.fragment fragment-index="1"}<br><br>
+[Begin by asking for conset. Record their age.]{.fragment fragment-index="2"}<br><br>
+[Ask them to guess their total screen time]{.fragment fragment-index="3"}<br><br>
+[Record the social media app they think they use the most, and their guess on the time spent on it.]{.fragment fragment-index="4"}<br><br>
+[Now record actual total total screen time, actual screen time of the social media app they think they use the most, and the actual screen time of highest used social media app if this is not the expected social media app of the respondent. ]{.fragment fragment-index="5"}
 
 # Fin.
