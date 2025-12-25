@@ -1,0 +1,289 @@
+---
+title: "Designing and Programming Survey Forms"
+author: "Ayush Patel"
+subtitle: "Short introduction and fundamentals of SurveyCTO"
+institute: "At Azim Premji University"
+date: today
+date-format: "DD MMM, YYYY"
+format: 
+  revealjs:
+    embed-resources: true
+    margin-left: 50px
+    margin-right: 50px
+    slide-number: c/t
+    width: 1400
+    height: 800
+    theme: [default, theme.scss]
+    footer: "Email: ayush.ap58@gmail.com"
+---
+
+# Hello
+
+::::{.columns}
+
+:::{.column}
+
+[I am Ayush.]{.fragment fragment-index="1" style="font-size:45px"}
+
+[I am a researcher working at the intersection of data, development and economics.]{.fragment fragment-index="2" style="font-size:25px"}
+
+[I am a [RStudio (Posit) certified tidyverse Instructor.](https://education.rstudio.com/trainers/people/patel+ayush/)]{.fragment fragment-index="3" style="font-size:25px"}
+
+[I am a Researcher at [Oxford Poverty and Human development Initiative (OPHI)](https://ophi.org.uk/), at the University of Oxford.]{.fragment fragment-index="4" style="font-size:25px"}
+
+:::
+
+:::{.column}
+
+![[Hello (Eh bonjour– donc–.) by Charles Motte](https://www.metmuseum.org/art/collection/search/392118"Well)](https://images.metmuseum.org/CRDImages/dp/original/DP808141.jpg){fig-align="center" height=400 .lightbox}
+ 
+
+:::
+
+::::
+
+# Did you come prepared?
+
+::::{.columns}
+
+:::{.column}
+[Do you have a SurveyCTO account? if not, register for a free account [here](https://login.surveycto.com/signup)]{.fragment fragment-index="1"}<br><br>
+
+[Please download the SurveyCTO Collect app on your phone]{.fragment fragment-index="2"}
+:::
+
+:::{.column}
+
+![[Armor (Gusoku) Helmet signed by Bamen Tomotsugu](https://www.metmuseum.org/art/collection/search/24975)](https://images.metmuseum.org/CRDImages/aa/original/DT5333.jpg){fig-align="center" height=400 .lightbox}
+
+
+:::
+
+::::
+
+# Learning Goals
+
+[Get a working understanding of how components of survey tech work.]{.fragment fragment-index="1"}
+
+[Design and program a survey questionnaire to make it available for field use.]{.fragment fragment-index="2"}
+
+[Extract the collected data for analyses.]{.fragment fragment-index="3"}
+
+
+# What we will not cover
+
+[Advanced methods of communicating with servers using API.]{.fragment fragment-index="1"}
+
+[Data encryption for sensitive data.]{.fragment fragment-index="2"}
+
+[Building data pipelines that extract, clean and present analyses.]{.fragment fragment-index="3"}
+
+[Sampling theory, and analyses.]{.fragment fragment-index="4"}
+
+[Intermediate and Advanced features of SurveyCTO]{.fragment fragment-index="5"}
+
+
+# Components of survey tech
+*and how it works*
+
+::::{.columns}
+
+:::{.column}
+<br>
+<br>
+But Why should I know this stupid tech stuff? ^[We only care about this because we need to know what has gone wrong, when it does. This is the minimum empathy the tech requires from us to use it effectively.]
+:::
+
+:::{.column}
+
+![[The Doctor Dismissing Death](https://www.metmuseum.org/art/collection/search/810928)](https://images.metmuseum.org/CRDImages/dp/original/DP881048.jpg){fig-align="center" height=400 .lightbox}
+:::
+
+::::
+
+# 
+
+<img src="https://www.mermaidchart.com/raw/2f5ea9e8-9bac-4fb6-9bc8-03be98494585?theme=light&version=v0.1&format=svg" width="1500" height="600" margin-left= "auto" margin-right= "auto">
+
+
+# 
+
+<img src="https://www.mermaidchart.com/raw/757d0dda-0a5f-41d4-8b4b-98d6bd2d2443?theme=light&version=v0.1&format=svg" width="1500" height="600" margin-left= "auto" margin-right= "auto">
+
+
+# 
+
+
+<img src="https://www.mermaidchart.com/raw/20179302-f77b-41f6-9868-773cc9af5264?theme=light&version=v0.1&format=svg" width="1500" height="600" margin-left= "auto" margin-right= "auto">
+
+
+# 
+
+<img src="https://www.mermaidchart.com/raw/214db29e-7857-46f2-b316-e99fdad96cf7?theme=light&version=v0.1&format=svg" width="1500" height="600"  margin-left= "auto" margin-right= "auto">
+
+
+
+# Reckless Learning-1 (10-15 Mins){.smaller}
+
+:::{.incremental}
+
+  - Navigate to your own SurveyCTO console. Explore the Design, Collect, Monitor, Export and Configure tabs.
+  - Using the Design tab in server console, upload [this](https://docs.google.com/spreadsheets/d/1-d543t2ZT3ljmQqQhEI3xL7vllv8Qlz8/edit?usp=drive_link&ouid=112023433242202033015&rtpof=true&sd=true) form.
+  - Use the SurveyCTO Collect app to get the blank form.
+  - Use the SurveyCTO Collect app to record data using the new form for any people/students around you. Or pretend to be the surveyor and the respondent inorder to fill the form.
+  - Use the SurveyCTO Collect app to submit the collected form(s).
+  - Go to the console. In the Export tab, find the submitted data. Get this data and take a look.
+
+:::
+
+# Great Job. We will now explore several available features for designing survey forms. {.smaller}
+
+# Form Definition. {.smaller}
+
+<iframe src="https://docs.google.com/spreadsheets/d/1-d543t2ZT3ljmQqQhEI3xL7vllv8Qlz8/edit?usp=drive_link&ouid=112023433242202033015&rtpof=true&sd=true" width="1500" height="600" data-external="1"></iframe>
+
+
+# The Bare Bones
+
+Say, there is only one single question. Nothing else is of interest to you. Everyone and anyone can be asked this question.
+
+**What would the form definition then look like?**
+
+[First ([*name*,*label*]{.mark}), you need the exact phrasing of the question.]{.fragment fragment-index="1"}<br><br>
+[Second ([*type*]{.mark}), what is the type of answer that you expect and accept? (a number, a date, an image?)]{.fragment fragment-index="2"}<br><br>
+[Third ([*constraint*]{.mark}), any reasonable constraints on the answers? (an age range, a date range ?)]{.fragment fragment-index="3"}
+
+# Reckless Learning-2 (5 mins){.smaller}
+
+[Create a copy of the file from the previous example.]{.fragment fragment-index="1"}<br><br>
+[Rename the file.]{.fragment fragment-index="2"}<br><br>
+[Open the newly renamed file. Remove all rows except the title rows from the survey sheet.]{.fragment fragment-index="3"}<br><br>
+[As discussed in the previous slide, add a single question in the survey sheet. Populate all necessary columns.]{.fragment fragment-index="4"}<br><br>
+[Remove all rows except the title row from the choices sheet.]{.fragment fragment-index="5"}<br><br>
+[Add row in choices sheet if needed.]{.fragment fragment-index="6"}<br><br>
+[Change the form title, and form ID in the settings sheet.]{.fragment fragment-index="7"}<br><br>
+[Upload the form on your server and test.]{.fragment fragment-index="8"}
+
+# Great Job. We will slowly add more complexity to our forms.{.smaller}
+
+*Before we move ahead..*
+
+:::{.incremental}
+- I shall introduce the Documentation Home page for SurveyCTO. [*Home Docs*](https://docs.surveycto.com/)
+- Some important webpages of the documentation to keep at hand while you create form definitions.[*Core*](https://docs.surveycto.com/02-designing-forms/01-core-concepts/), [*Additioinal*](https://docs.surveycto.com/02-designing-forms/02-additional-topics/), [Advanced](https://docs.surveycto.com/02-designing-forms/03-advanced-topics/)
+:::
+
+
+# Expressions {.smaller}
+
+
+::::{.cloumns}
+
+:::{.column}
+
+[**Why?**]{.fragment fragment-index="1"}<br><br>
+[Lets us calculate on the fly, apply conditional flows to questions, and validate answers.]{.fragment fragment-index="2"}<br><br>
+[There are two important ideas from the syntax point of view]{.fragment fragment-index="3"}<br><br>
+[First, referring to the value of a specific field.]{.fragment fragment-index="4"}<br><br>
+[Second, referring to the values the current field.]{.fragment fragment-index="5"}<br><br>
+[We shall look at how these are used.]{.fragment fragment-index="6"}<br><br>
+:::
+
+:::{.column}
+
+![[Terror or Fright by Le Brun](https://www.metmuseum.org/art/collection/search/386122)](https://images.metmuseum.org/CRDImages/dp/original/DP854027.jpg){fig-align="center" height=400 .lightbox}
+
+:::
+
+::::
+
+## Expressions
+
+[In the `trivial-biryani-survey` I use `${enrolled} = 1` to ensure that questions are asked to respondents that report to be enrolled in college.]{.fragment fragment-index="1"}<br><br>
+
+[I also use `.>16 and .<130` to ensure age values are validated? Do you think my range is a reasonable one?]{.fragment fragment-index="2"}<br><br>
+
+[Can you find other instances in the biryani survey where I use such expression?]{.fragment fragment-index="3"}<br><br>
+
+[How is the `$` operator different from the `.` operator?]{.fragment fragment-index="4"}<br><br>
+
+[See [this](https://docs.surveycto.com/02-designing-forms/01-core-concepts/09.expressions.html) page to browse through applying other logical and mathematical operations.]{.fragment fragment-index="5"}
+
+# Constraints
+
+[The need to restrict answers to a reasonable set of options or numbers.]{.fragment fragment-index="1"}<br><br>
+[How many people live in your house: "56"]{.fragment fragment-index="2"}<br><br>
+[The constraints are implemented in the `constraint` column of the form definition]{.fragment fragment-index="3"}<br><br>
+[The constraints can be accompanied with a message for the enumerator. This can be done using the `constraint message` column of the form definition]{.fragment fragment-index="4"}<br><br>
+[Can you find the constraint implemented in the `trivial-biryani-survey` for number of times a respondent consumes biryani in a week?]{.fragment fragment-index="5"}
+
+# Relevance
+
+[It is usually of interest to see how *certain* people answer a question of our interest.]{.fragment fragment-index="1"}<br><br>
+[We can use `expressions` to change the flow of the survey questions so that we ask the right question to the right people.]{.fragment fragment-index="2"}<br><br>
+[`expressions` are provided in the `relevance` column for a question or group of questions.]{.fragment fragment-index="3"}<br><br>
+[Continue only on consent is the common, important, and easiest to implement relevance that is found in all decent surveys.]{.fragment fragment-index="4"}<br><br>
+[In the `trivial-biryani-survey` see the relevance column to see an example.]{.fragment fragment-index="5"}
+
+## Reckless Learning-3 (25-30 mins) {.smaller}
+
+[Create a form definition for a door-to-door household interview.]{.fragment fragment-index="1"}<br><br>
+[You are broadly interested in the access to banking and spending autonomy of stay-at-home married women.]{.fragment fragment-index="2"}<br><br>
+[You want to capture details of education, age, marital status,age at marriage of the target group and their spouse.]{.fragment fragment-index="3"}<br><br>
+[You want information on holding a bank account, debit cards, credit cards, UPI for the target group and their spouse.]{.fragment fragment-index="4"}<br><br>
+[For the target group you want to record who opened their account, Did they open an (additional or new) account after marriage.]{.fragment fragment-index="5"}<br><br>
+[Does the target group have any sources of income/savings independent of their spouse.]{.fragment fragment-index="6"}<br><br>
+[How often does the target group spend on indulgence expenses (not for their kids education, not for HH expenses, etc) only for themselves. Ask for reasons if they dont.]{.fragment fragment-index="7"}<br><br>
+[Begin by making a flow chart of questions, phrase the questions, use constraints and relevance as required.]{.fragment fragment-index="8"}<br><br>
+[Upload the form on SurveyCTO and test it, does it work as expected?]{.fragment fragment-index="9"}
+
+# Grouping
+
+::::{.columns}
+
+:::{.column width="30%"}
+
+[Organization]{.fragment fragment-index="1"}<br><br>
+[Easy Navigation]{.fragment fragment-index="1"}<br><br>
+[Less Duplication]{.fragment fragment-index="2"}<br><br>
+[Less copy paste errors]{.fragment fragment-index="2"}<br><br>
+
+:::
+
+:::{.column width="70%"}
+
+|   type    |  name  | label  | relevance |
+|:---------:|:------:|:------:|:---------:|
+|begin group| gname  | Group1 | ${child}=1|
+|..fields.. | f1     | what...|           |
+|..fields.. | f2     |  how...|           |
+| end group |        |        |           |
+
+:::
+
+::::
+
+# Repeating Questions
+
+|   type     |  name  | label  | relevance | repeat_count  |
+|:----------:|:------:|:------:|:---------:|:-------------:|
+|begin repeat| gname  | Group1 | ${child}=1| ${num_child}  |
+|..fields..  | f1     | what...|           |               |
+|..fields..  | f2     |  how...|           |               |
+| end repeat |        |        |           |               |
+
+[see docs](https://docs.surveycto.com/02-designing-forms/01-core-concepts/06.groups.html)
+
+# Calculate
+
+|   type     |  name  | calculation   |  relevance      |
+|:----------:|:------:|:-------------:|:---------------:|
+|calculate   |num_rand|once(random()) |                 |
+|integer     |treat   |               | ${num_rand}<=0.5|
+|integer     |control |               | ${num_rand}>0.5 |
+
+
+[see docs](https://docs.surveycto.com/02-designing-forms/01-core-concepts/03zb.field-types-calculate.html)
+
+
+# Fin.
